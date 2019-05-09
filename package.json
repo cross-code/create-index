@@ -25,8 +25,8 @@
     "eslint": "^3.9.1",
     "eslint-config-canonical": "^4.0.0",
     "husky": "^0.11.9",
-    "mocha": "^3.1.2",
-    "semantic-release": "^6.3.2"
+    "mocha": "^6.1.4",
+    "semantic-release": "^15.13.13"
   },
   "engines": {
     "node": ">=5"
@@ -47,7 +47,6 @@
     "build": "cross-env NODE_ENV=production babel --source-maps --copy-files ./src --out-dir ./dist",
     "create-index": "node ./dist/bin/create-index ./src/utilities",
     "lint": "cross-env NODE_ENV=development eslint ./src ./tests",
-    "precommit": "npm run test",
     "test": "npm run build && npm run lint && cross-env NODE_ENV=development mocha --compilers js:babel-register"
   },
   "version": "1.1.0"
